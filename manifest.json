@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Opus",
+  "version": "1.0.0",
+  "description": "Complete domain blocking for deep work.",
+  "icons": {
+    "48": "icon-48.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Focus Blocker"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="setupView">
+    <div id="errorMessage" class="error-message"></div>
+    <h1>Opus</h1>
+    
+    <div class="section">
+      <label>Blocked Sites</label>
+      <textarea id="domainList" placeholder="youtube.com&#10;reddit.com&#10;twitter.com"></textarea>
+      <div id="savedDomains"></div>
+    </div>
+    
+    <div class="section">
+      <label>Duration</label>
+      <div class="timer-presets">
+        <button class="preset-btn" data-minutes="15">15m</button>
+        <button class="preset-btn" data-minutes="25">30m</button>
+        <button class="preset-btn" data-minutes="45">45m</button>
+        <button class="preset-btn" data-minutes="60">60m</button>
+      </div>
+      <input type="text" id="duration" value ="30" min="1" placeholder="Custom">
+    </div>
+    
+    <button id="startBtn">Start Session</button>
+  </div>
+  
+  <div id="activeView" style="display: none;">
+    <div class="active-header">
+      <h1>Session Active</h1>
+    </div>
+    <div class="timer-display">
+      <p id="timeRemaining"></p>
+    </div>
+    <div class="blocked-list">
+      <p id="blockedDomains"></p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
